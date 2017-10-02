@@ -142,6 +142,29 @@ Die Nutzdaten sind wie folgt definiert:
 | timestamp | `string` | Zeitpunkt im [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) Format (Beispiel: 2017-08-02T05:19:40+00:00) | yes
 | personId | `string` | Die Id der Person im System des Partners | yes |
 
+## Response
+
+Wenn eine Nachricht korrekt von der medo.check Messaging-API verarbeitet wurde, enthält der Sender einen Response mit Statuscode **400 Ok**. In allen anderen Fällen liegt ein Fehler vor. Im Body des Fehlerresponse steh die vom Server geworfene Ausnahme.
+
+Im Erfolgsfall enthält die Anwort im Body die gesendete Nachricht, erweitert um folgendes Feld:
+
+|    |   Type | Description | Required  |
+| -- | ------ | ----------- | --------- |
+| receivedOn | `string` | Zeitstempel des Eingangszeitpunktes der Nachricht auf dem Server im [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) Format. | yes |
+
+Die oben gesendete Beispielnachricht wird beispielsweise so erweitert:
+
+```json
+{
+    "id": "088eee45-0935-4e61-a91d-c1f0d6561120",
+    ...
+    "payload": {
+        ...
+    },
+    "receivedOn": "2017-09-28T09:03:33.7486450Z"
+}
+```
+
 ## Datenschutz
 
 medo.check stellt einen HTTPS Endpunkt zur Verfügung. Alle Daten an die API werden also verschlüsselt übertragen. Da keine API-Keys oder sonstige Daten in der URL, sondern lediglich im verschlüsselten Inhalt der Nachricht übertragen werden, ist Aussenstehenden kein Zugriff auf wichtige Daten möglich, ohne erhebliche kriminelle Energie aufzuwenden.
