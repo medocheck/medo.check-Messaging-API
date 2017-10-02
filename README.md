@@ -54,7 +54,7 @@ Der Request Body enthält die Nachricht im **Json-Format**. Sie ist wie folgt de
 
 |    |   Type | Description | Required  |
 | -- | ------ | ----------- | --------- |
-| ClientId | `string`| Hat ein gemeinsamer Kunde mehrere Standorte, die zusammen unter einem Mandanten geführt werden, muss hier eine **eindeutige Standort-ID** gesendet werden, um eine zuordnung des Standorts zu ermöglichen. Eine Liste dieser **Standort-IDs** muss medo.check mitgeteilt werden. | yes |
+| clientId | `string`| Hat ein gemeinsamer Kunde mehrere Standorte, die zusammen unter einem Mandanten geführt werden, muss hier eine **eindeutige Standort-ID** gesendet werden, um eine zuordnung des Standorts zu ermöglichen. Eine Liste dieser **Standort-IDs** muss medo.check mitgeteilt werden. | yes |
 
 Folgendes Beispiel definiert eine korrekte Nachricht:
 
