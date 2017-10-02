@@ -139,7 +139,7 @@ Die Nutzdaten sind wie folgt definiert:
 |    |   Type | Description | Required  |
 | -- | ------ | ----------- | --------- |
 | type | `string` | Check-in oder Check-out? Gültige Werte sind: *checkin* und *checkout* | yes
-| timestamp | `string` | Zeitpunkt im ISO 8601 Format (Beispiel: 2017-08-02T05:19:40+00:00) | yes
+| timestamp | `string` | Zeitpunkt im [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) Format (Beispiel: 2017-08-02T05:19:40+00:00) | yes
 | personId | `string` | Die Id der Person im System des Partners | yes |
 
 ## Datenschutz
