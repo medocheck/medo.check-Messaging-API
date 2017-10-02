@@ -37,7 +37,7 @@ Der Request Body enthält die Nachricht im **Json-Format**. Sie ist wie folgt de
 
 |    |   Type | Description | Required  |
 | -- | ------ | ----------- | --------- |
-| id |  `GUID`| Eindeutige Id der Nachricht | Yes |
+| id |  `string`| Eindeutige Id der Nachricht, gewünschtes Format: *GUID* oder *UUID* | Yes |
 |  sender | `Sender`| Identifikationsdaten des Senders | Yes |
 | receiver | `Receiver`| Identifikationsdaten des Empfängers, z.B. zur weiterverteilung an verschiedene Standorte | no
 | messageType | `string`| Nachrichtentyp. *Siehe Abschnitt Nachrichtentypen in dieser Dokumentation!* | Yes |
