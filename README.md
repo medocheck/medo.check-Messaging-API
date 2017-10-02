@@ -144,7 +144,7 @@ Die Nutzdaten sind wie folgt definiert:
 
 ## Datenschutz
 
-medo.check stellt einen HTTPS Entpunkt zur Verfügung. Alle Daten an die API werden also verschlüsselt übertragen. Da keine API-Keys oder sonstige Daten in der URL, sondern lediglich im verschlüsselten Inhalt der Nachricht übertragen werden, ist Aussenstehenden kein Zugriff auf wichtige Daten möglich, ohne erhebliche kriminelle Energie aufzuwenden.
+medo.check stellt einen HTTPS Endpunkt zur Verfügung. Alle Daten an die API werden also verschlüsselt übertragen. Da keine API-Keys oder sonstige Daten in der URL, sondern lediglich im verschlüsselten Inhalt der Nachricht übertragen werden, ist Aussenstehenden kein Zugriff auf wichtige Daten möglich, ohne erhebliche kriminelle Energie aufzuwenden.
 
 Die Inhalte der Nachrichten werden nur solange gespeichert, bis sie vom medo.check System des gemeinsamen Kunden abgeholt und verarbeitet wurden. Dann wird die komplette Nachricht mit Inhalt gelöscht. medo.check erhebt zu jeder Nachricht die Daten, wann welcher Partner eine Nachricht für einen gemeinsamen Kunden gesendet hat und wann diese Nachricht vom medo.check System verarbeitet wurde, um im Problemfall dieses Log einsehen zu können. Es werden *KEINE NACHRICHTENINHALTE* gespeichert zu diesen Logs gespeichert.
 
