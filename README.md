@@ -75,7 +75,7 @@ Folgendes Beispiel definiert eine korrekte Nachricht:
             "id": "12b-1350",
             "email": "max.mustermann@gmx.de",
             "rfidList": ["12345678902345"],
-            "street": "Teststrasse",
+            "street": "Teststrasse 1",
             "zipCode": "45678",
             "city": "Neudorf",
             "imageData: "/9j/4AAQSkZJRgABA ... "
@@ -109,7 +109,8 @@ medo.check besitzt eine Matching-Logik, um Dubletten zu erkennen. Ein in medo.ch
 | rfidList | `array<string>` | Liste mit zuordneten RFID Medien / Zugangsmedien | yes |
 | contractType | `string`| ID der Vertragsart. Kann in medo.check einem Betreuungsprofil zugeordnet werden. | no |
 | startOfContract | `string`| Vertragsstart im Format `yyyy-mm-dd`. Der Vertragsstart bedeutet in diesem Fall, wann mit dem Training und dem Betreuungsablauf begonnen werden soll | no
-| endOfContract | `string`| Vertragsende im Format `yyyy-mm-dd`. Das Vertragsende bedeut in diesem Fall, wann die Betreuung und damit der Betreuungsablaug endet. | no
+| endOfContract | `string`| Vertragsende im Format `yyyy-mm-dd`. Das Vertragsende bedeut in diesem Fall, wann die Betreuung und damit der Betreuungsablauf endet. | no |
+| contractActive | `boolean` | Vertrag ist aktuell aktiv | no |
 | street | `string`| Strasse | no |
 | streetAdditional | `string`| Adresszusatz | no |
 | zipCode | `string` | Postleitzahl | no |
@@ -130,7 +131,7 @@ Die Nachrichtentypen sind **`checkIn`** und **`checkOut`**.
 
 > **ACHTUNG:** Damit Check-in und Check-out funktionieren, muss die Person zuvor mit `createPerson` in medo.check angelegt bzw. verknüpft worden sein.
 
-> **ACHTUNG:** Bei mehreren Standorten muss unbedingt die Standort-Id in der Nachticht gesetzt sein, damit der richtige Standort zugewiesen werden kann.
+> **ACHTUNG:** Bei mehreren Standorten muss unbedingt die Standort-Id in der Nachricht gesetzt sein, damit der richtige Standort zugewiesen werden kann.
 
 Die Nutzdaten sind wie folgt definiert:
 
@@ -144,7 +145,7 @@ Die Nutzdaten sind wie folgt definiert:
 
 ## Response
 
-Wenn eine Nachricht korrekt von der medo.check Messaging-API verarbeitet wurde, enthält der Sender einen Response mit Statuscode **400 Ok**. In allen anderen Fällen liegt ein Fehler vor. Im Body des Fehlerresponse steh die vom Server geworfene Ausnahme.
+Wenn eine Nachricht korrekt von der medo.check Messaging-API verarbeitet wurde, enthält der Sender einen Response mit Statuscode **400 Ok**. In allen anderen Fällen liegt ein Fehler vor. Im Body des Fehlerresponse steh die vom Server mitgeteilte Ausnahme.
 
 Im Erfolgsfall enthält die Anwort im Body die gesendete Nachricht, erweitert um folgendes Feld:
 
@@ -167,8 +168,8 @@ Die oben gesendete Beispielnachricht wird beispielsweise so erweitert:
 
 ## Datenschutz
 
-medo.check stellt einen HTTPS Endpunkt zur Verfügung. Alle Daten an die API werden also verschlüsselt übertragen. Da keine API-Keys oder sonstige Daten in der URL, sondern lediglich im verschlüsselten Inhalt der Nachricht übertragen werden, ist Aussenstehenden kein Zugriff auf wichtige Daten möglich, ohne erhebliche kriminelle Energie aufzuwenden.
+medo.check stellt einen HTTPS Endpunkt zur Verfügung. Alle Daten an die API werden also verschlüsselt übertragen. Da keine API-Keys oder sonstige Daten in der URL, sondern lediglich im verschlüsselten Inhalt der Nachricht übertragen werden, ist Außenstehenden kein Zugriff auf wichtige Daten möglich, ohne erhebliche kriminelle Energie aufzuwenden.
 
 Die Inhalte der Nachrichten werden nur solange gespeichert, bis sie vom medo.check System des gemeinsamen Kunden abgeholt und verarbeitet wurden. Dann wird die komplette Nachricht mit Inhalt gelöscht. medo.check erhebt zu jeder Nachricht die Daten, wann welcher Partner eine Nachricht für einen gemeinsamen Kunden gesendet hat und wann diese Nachricht vom medo.check System verarbeitet wurde, um im Problemfall dieses Log einsehen zu können. Es werden *KEINE NACHRICHTENINHALTE* zu diesen Logs gespeichert.
 
-> **Hinweis:** Jeder Schnittstellenpartner sollte mit medo.check eine Auftragsdatenverarbeitung vereinbaren, da Daten von seinem System an das medo.check System übertragen werden. Jeder Schnittstellenpartner sollte seine Kunden zusätzlich darauf hinweisen und informieren, dass diese in Ihre Verträge einen Hinweis aufnehmen, dass die Daten zur optimalen Betreuungs- und Trainingssteuerung an Dritte, in diesem Fall medo.check übertragen werden.
+> **Hinweis:** Jeder Schnittstellenpartner sollte mit medo.check eine Auftragsdatenverarbeitung vereinbaren, da Daten von seinem System an das medo.check System übertragen werden. Jeder Schnittstellenpartner sollte seine Kunden zusätzlich darauf hinweisen und informieren, dass diese in Ihre Verträge einen Hinweis aufnehmen, dass die Daten zur optimalen Betreuungs- und Trainingssteuerung an Dritte, in diesem Fall medo.check, übertragen werden.
