@@ -4,9 +4,9 @@ Die medo.check Messaging API erlaubt es Verwaltungssystemen, alle für medo.chec
 
 Da medo.check lokal in den Standorten installiert wird und einige Anbieter Internetlösungen zur Verfügung stellen, wird hier die Brücke zwischen lokal und Internet geschlossen.
 
-## Vorbereitung und Authorisierung
+## Vorbereitung und Autorisierung
 
-Um die medo.check Messaging API zu benutzen, wird für jeden Partner eine **Partner-ID** und für jeden gemeinsamen Kunden des Partners und medo.check ein **API-Key** benötigt. Dies wird ebnötigt, um sicherszustellen, dass die Daten nur den entsprechenden Kunden erreichen werden und niemand anderes Zugriff auf die Daten bekommt.
+Um die medo.check Messaging API zu benutzen, wird für jeden Partner eine **Partner-ID** und für jeden gemeinsamen Kunden des Partners und medo.check ein **API-Key** benötigt. Dies wird benötigt, um sicherszustellen, dass die Daten nur den entsprechenden Kunden erreichen werden und niemand anderes Zugriff auf die Daten bekommt.
 
 Die **Partner-Id** und der **API-Key** werden auf Anfrage von medo.check erstellt.
 
@@ -18,7 +18,7 @@ Das Senden einer Nachricht an medo.check funktioniert immer gleich. Es gibt gena
 
     https://messaging.medocheck.com/messages/publish
 
-Die Daten werden via **Http POST** gesendet. Die Daten werden im **JSON-Format** erwartet und zur Authentifizierung ein API Key als Bearer Token.
+Die Daten werden via **Http POST** gesendet. Die Daten werden im **JSON-Format** erwartet und zur Autorisierung ein API Key als Bearer Token.
 
 ### Request Header
 
