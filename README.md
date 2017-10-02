@@ -129,6 +129,7 @@ medo.check besitzt eine Matching-Logik, um Dubletten zu erkennen. Ein in medo.ch
 Die Nachrichtentypen sind **`checkIn`** und **`checkOut`**.
 
 > **ACHTUNG:** Damit Check-in und Check-out funktionieren, muss die Person zuvor mit `createPerson` in medo.check angelegt bzw. verknüpft worden sein.
+
 > **ACHTUNG:** Bei mehreren Standorten muss unbedingt die Standort-Id in der Nachticht gesetzt sein, damit der richtige Standort zugewiesen werden kann.
 
 Die Nutzdaten sind wie folgt definiert:
