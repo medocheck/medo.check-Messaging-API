@@ -120,7 +120,6 @@ medo.check besitzt eine Matching-Logik, um Dubletten zu erkennen. Ein in medo.ch
 | mobile | `string`| Mobilnummer | no |
 | fax | `string` | Faxnummer | no
 | email | `string`| Emailadresse | no |
-| internet | `string` | Webseite | no |
 | skype | `string`| Skype-Kontakt | no |
 | prospect | `boolean`| Ist die Person nur ein Interessent? | no |
 | imageData | `string` | Bild der Person (Jpeg oder Png) als Base64 kodiertes Byte-Array | no
