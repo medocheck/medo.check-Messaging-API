@@ -169,7 +169,7 @@ Die oben gesendete Beispielnachricht wird beispielsweise so erweitert:
 
 Die medo.check Messaging API stellt einen Testclient zur Verfügung, der die gesendeten Nachrichten abholt und ausgibt. Lassen Sie sich von medo.check einen Test-API Key geben. Schicken Sie Ihre Testnachrichten mit diesem API-Key. Öffnen Sie den Client und geben Sie diesen API-Key in das Eingabefeld ein. Der Test-Client findet die neue Nachricht und zeigt diese in einer Liste an. Klicken Sie auf das Listenelement, um die Nachricht im Json-Format zu anzuzeigen. So sehen Sie genau, was von der Software gesendet wurde.
 
-[medo.check Messaging API - Testclient](https://dev-messaging.medocheck.com)
+- [medo.check Messaging API - Testclient](https://dev-messaging.medocheck.com)
 
 > **Hinweis:** Die Nachricht wird vom Client direkt als verarbeitet bestätigt und wird somit auf Serverseite gelöscht. Starten Sie den Client erneut, ist die Liste leer.
 
