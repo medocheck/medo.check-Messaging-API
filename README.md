@@ -1,12 +1,12 @@
 # medo.check Messaging API
 
-Die medo.check Messaging API erlaubt es Verwaltungssystemen, alle für medo.check relevanten Stammdatenänderungen, sowie Check-In und Check-Out informationen zu senden, um dem gemeinsamen Kunden eine best-mögliche Integration beider Systeme zu bieten.
+Die [medo.check Messaging API](https://messaging.medocheck.com) erlaubt es Verwaltungssystemen, alle für medo.check relevanten Stammdatenänderungen, sowie Check-In und Check-Out informationen zu senden, um dem gemeinsamen Kunden eine best-mögliche Integration beider Systeme zu bieten.
 
 Da medo.check lokal in den Standorten installiert wird und einige Anbieter Internetlösungen zur Verfügung stellen, wird hier die Brücke zwischen lokal und Internet geschlossen.
 
 ## Vorbereitung und Autorisierung
 
-Um die medo.check Messaging API zu benutzen, wird für jeden Partner eine **Partner-ID** und für jeden gemeinsamen Kunden des Partners und medo.check ein **API-Key** benötigt. Dies wird benötigt, um sicherszustellen, dass die Daten nur den entsprechenden Kunden erreichen werden und niemand anderes Zugriff auf die Daten bekommt.
+Um die [medo.check Messaging API](https://messaging.medocheck.com) zu benutzen, wird für jeden Partner eine **Partner-ID** und für jeden gemeinsamen Kunden des Partners und medo.check ein **API-Key** benötigt. Dies wird benötigt, um sicherszustellen, dass die Daten nur den entsprechenden Kunden erreichen werden und niemand anderes Zugriff auf die Daten bekommt.
 
 Die **Partner-Id** und der **API-Key** werden auf Anfrage von medo.check erstellt.
 
@@ -143,7 +143,7 @@ Die Nutzdaten sind wie folgt definiert:
 
 ## Response
 
-Wenn eine Nachricht korrekt von der medo.check Messaging-API verarbeitet wurde, enthält der Sender einen Response mit Statuscode **400 Ok**. In allen anderen Fällen liegt ein Fehler vor. Im Body des Fehlerresponse steh die vom Server mitgeteilte Ausnahme.
+Wenn eine Nachricht korrekt von der [medo.check Messaging API](https://messaging.medocheck.com) verarbeitet wurde, enthält der Sender einen Response mit Statuscode **400 Ok**. In allen anderen Fällen liegt ein Fehler vor. Im Body des Fehlerresponse steh die vom Server mitgeteilte Ausnahme.
 
 Im Erfolgsfall enthält die Anwort im Body die gesendete Nachricht, erweitert um folgendes Feld:
 
@@ -166,7 +166,7 @@ Die oben gesendete Beispielnachricht wird beispielsweise so erweitert:
 
 ## Testing
 
-Die medo.check Messaging API stellt einen Testclient zur Verfügung, der die gesendeten Nachrichten abholt und ausgibt. Lassen Sie sich von medo.check einen Test-API Key geben. Schicken Sie Ihre Testnachrichten mit diesem API-Key. Öffnen Sie den Client und geben Sie diesen API-Key in das Eingabefeld ein. Der Test-Client findet die neue Nachricht und zeigt diese in einer Liste an. Klicken Sie auf das Listenelement, um die Nachricht im Json-Format zu anzuzeigen. So sehen Sie genau, was von der Software gesendet wurde.
+Die [medo.check Messaging API](https://messaging.medocheck.com) stellt einen Testclient zur Verfügung, der die gesendeten Nachrichten abholt und ausgibt. Lassen Sie sich von medo.check einen Test-API Key geben. Schicken Sie Ihre Testnachrichten mit diesem API-Key. Öffnen Sie den Client und geben Sie diesen API-Key in das Eingabefeld ein. Der Test-Client findet die neue Nachricht und zeigt diese in einer Liste an. Klicken Sie auf das Listenelement, um die Nachricht im Json-Format zu anzuzeigen. So sehen Sie genau, was von der Software gesendet wurde.
 
 - [medo.check Messaging API - Testclient](https://dev-messaging.medocheck.com)
 
@@ -174,7 +174,7 @@ Die medo.check Messaging API stellt einen Testclient zur Verfügung, der die ges
 
 ## Datenschutz
 
-medo.check stellt einen HTTPS Endpunkt zur Verfügung. Alle Daten an die API werden also verschlüsselt übertragen. Da keine API-Keys oder sonstige Daten in der URL, sondern lediglich im verschlüsselten Inhalt der Nachricht übertragen werden, ist Außenstehenden kein Zugriff auf wichtige Daten möglich, ohne erhebliche kriminelle Energie aufzuwenden.
+[medo.check Messaging API](https://messaging.medocheck.com) stellt einen HTTPS Endpunkt zur Verfügung. Alle Daten an die API werden also verschlüsselt übertragen. Da keine API-Keys oder sonstige Daten in der URL, sondern lediglich im verschlüsselten Inhalt der Nachricht übertragen werden, ist Außenstehenden kein Zugriff auf wichtige Daten möglich, ohne erhebliche kriminelle Energie aufzuwenden.
 
 Die Inhalte der Nachrichten werden nur solange gespeichert, bis sie vom medo.check System des gemeinsamen Kunden abgeholt und verarbeitet wurden. Dann wird die komplette Nachricht mit Inhalt gelöscht. medo.check erhebt zu jeder Nachricht die Daten, wann welcher Partner eine Nachricht für einen gemeinsamen Kunden gesendet hat und wann diese Nachricht vom medo.check System verarbeitet wurde, um im Problemfall dieses Log einsehen zu können. Es werden *KEINE NACHRICHTENINHALTE* zu diesen Logs gespeichert.
 
