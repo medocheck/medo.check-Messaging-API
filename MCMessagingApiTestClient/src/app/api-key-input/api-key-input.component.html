@@ -1,0 +1,13 @@
+<section class="mat-typography">
+  <md-card>
+    <md-card-content>
+      <md-form-field class="full-width">
+        <textarea mdInput mdTextareaAutosize placeholder="Api-Key" [formControl]="apiTokenControl"></textarea>
+        <md-error *ngIf="apiTokenControl.hasError('required')">
+          Api-Key is <strong>required</strong>
+        </md-error>
+        <md-hint align="start"><strong>Bitte geben Sie den von medo.check erhaltenen API-Key ein!</strong></md-hint>
+      </md-form-field>
+    </md-card-content>
+  </md-card>
+</section>

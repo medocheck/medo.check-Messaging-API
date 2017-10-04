@@ -1,0 +1,14 @@
+<md-card *ngIf="apiKeyValid">
+    <md-card-header>Suche neue Nachrichten...</md-card-header>
+    <md-card-content>
+        <md-progress-bar mode="indeterminate"></md-progress-bar>
+        <mc-message-list [messages]="messages"></mc-message-list>
+    </md-card-content>
+</md-card>
+
+<md-card *ngIf="!apiKeyValid && apiToken && apiToken.length > 0">
+    <md-card-content>
+        Bitte geben Sie einen gültigen API-Key ein!
+    </md-card-content>
+</md-card>
+

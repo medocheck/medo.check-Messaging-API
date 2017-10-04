@@ -1,0 +1,6 @@
+<md-toolbar class="header" color="primary">
+  <span>medo.check Messaging API - Test Client</span>
+</md-toolbar>
+
+<mc-api-key-input (apiTokenChanged)="apiTokenChanged($event)"></mc-api-key-input>
+<mc-message-output [apiToken]="apiToken"></mc-message-output>

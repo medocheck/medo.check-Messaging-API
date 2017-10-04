@@ -1,0 +1,14 @@
+<md-expansion-panel *ngFor="let message of messages">
+  <md-expansion-panel-header>
+    <md-panel-title>
+      {{message.receivedOn | date:'medium'}}
+    </md-panel-title>
+    <md-panel-description>
+      <strong>{{ message.messageType}}</strong>
+    </md-panel-description>
+  </md-expansion-panel-header>
+
+ <pre>
+   {{ message | json }}
+  </pre>
+</md-expansion-panel>
