@@ -138,7 +138,6 @@ Die Nutzdaten sind wie folgt definiert:
 
 |    |   Type | Description | Required  |
 | -- | ------ | ----------- | --------- |
-| type | `string` | Check-in oder Check-out? Gültige Werte sind: *checkin* und *checkout* | yes
 | timestamp | `string` | Zeitpunkt im [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) Format (Beispiel: 2017-08-02T05:19:40+00:00) | yes
 | personId | `string` | Die Id der Person im System des Partners | yes |
 
@@ -180,3 +179,9 @@ medo.check stellt einen HTTPS Endpunkt zur Verfügung. Alle Daten an die API wer
 Die Inhalte der Nachrichten werden nur solange gespeichert, bis sie vom medo.check System des gemeinsamen Kunden abgeholt und verarbeitet wurden. Dann wird die komplette Nachricht mit Inhalt gelöscht. medo.check erhebt zu jeder Nachricht die Daten, wann welcher Partner eine Nachricht für einen gemeinsamen Kunden gesendet hat und wann diese Nachricht vom medo.check System verarbeitet wurde, um im Problemfall dieses Log einsehen zu können. Es werden *KEINE NACHRICHTENINHALTE* zu diesen Logs gespeichert.
 
 > **Hinweis:** Jeder Schnittstellenpartner sollte mit medo.check eine Auftragsdatenverarbeitung vereinbaren, da Daten von seinem System an das medo.check System übertragen werden. Jeder Schnittstellenpartner sollte seine Kunden zusätzlich darauf hinweisen und informieren, dass diese in Ihre Verträge einen Hinweis aufnehmen, dass die Daten zur optimalen Betreuungs- und Trainingssteuerung an Dritte, in diesem Fall medo.check, übertragen werden.
+
+## Changelog
+
+### 01.10.2017 - Version 1
+- Stammdaten über die Nachrichtentypen createPerson, updatePerson, deletePerson
+- Check-In / Check-Out über die Nachrichtentypen checkIn, checkOut
